@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/side-nav.jsx", "src/app/projects/page.jsx", "src/app/projects/web-design/page.jsx", "src/app/projects/graphic-design/page.jsx", "src/app/messages/page.jsx", "src/app/settings/account/page.jsx", "src/app/settings/page.jsx", "src/app/help/page.jsx", "src/app/settings/privacy/page.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/components/header-mobile.jsx", "src/components/header.jsx", "src/components/page-wrapper.jsx", "src/components/margin-width-wrapper.jsx", "src/constants.jsx", "tailwind.config.js"],
+  "exclude": ["node_modules"]
+}
