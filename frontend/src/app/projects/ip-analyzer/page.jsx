@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const page = () => {
+const Page = () => {
   const [key, setKey] = useState('');
   const [text, setText] = useState('');
 
@@ -65,4 +65,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
