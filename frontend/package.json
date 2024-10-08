@@ -16,9 +16,10 @@
     "clsx": "^2.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "framer-motion": "^10.16.4",
-    "next": "13.5.4",
+    "next": "^13.5.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-flow-renderer": "^10.3.17",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {

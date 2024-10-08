@@ -16,9 +16,9 @@ export const SIDENAV_ITEMS = [
       { title: 'All', path: '/projects' },
       { title: 'Web Design', path: '/projects/web-design' },
       { title: 'Graphic Design', path: '/projects/graphic-design' },
-      {title: 'Domain-analyzer', path: '/projects/domain-analyzer' },
-      {title: 'Hash-analyzer', path: '/projects/hash-analyzer' },
-      {title: 'Ip-analyzer', path: '/projects/ip-analyzer' },
+      { title: 'Domain Analyzer', path: '/projects/domain-analyzer' },
+      { title: 'Hash Analyzer', path: '/projects/hash-analyzer' },
+      { title: 'IP Analyzer', path: '/projects/ip-analyzer' },
     ],
   },
   {
