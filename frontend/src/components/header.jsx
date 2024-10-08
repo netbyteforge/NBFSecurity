@@ -36,7 +36,7 @@ function Header() {
 
         <div className="hidden md:block">
           <div className="h-8 w-8 rounded-full bg-zinc-300 flex items-center justify-center text-center">
-            <span className="font-semibold text-sm">HQ</span>
+            <span className="font-semibold text-sm">NBF</span>
           </div>
         </div>
       </div>

@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.analyzer-form {
+    display: grid;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 10vh;
+}
+
+/* .title-font-bold {
+    padding: 1.2rem;
+} */
+
+.input-api,
+.input-ioc {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-ioc {
+    height: 100px; /* Adjust the height for the textarea */
+  }
+
+  /* Button styles */
+.button-analyzer {
+    background-color: black; /* Green background #4CAF50 */
+    color: white;
+    padding: 10px 15px;
+    width: max-content;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.button-analyzer:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  .button-loader {
+    display: flex;
+  }
+  
+  p {
+    color: #555; /* Change color as needed */
+    font-size: 1rem; /* Adjust font size */
+    margin-top: 10px; /* Spacing from the form */
+    margin-left: 10px;
+  }

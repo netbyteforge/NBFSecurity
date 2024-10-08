@@ -5,9 +5,11 @@ import React, { useState } from 'react';
 const Page = () => {
   const [key, setKey] = useState('');
   const [text, setText] = useState('');
+  const [loading, setLoading] = useState(false); // Loader state
 
   const handleDownload = async (e) => {
       e.preventDefault();
+      setLoading(true); // Start loading
       
       const data = new URLSearchParams();
       data.append('key', key);
@@ -40,29 +42,52 @@ const Page = () => {
           link.parentNode.removeChild(link);
       } catch (error) {
           console.error('Error while downloading the CSV file:', error);
-      }
+      } finally {
+        setLoading(false); // End loading
+    }
   };
 
   return (
+    <>
+    <span className="font-bold text-4xl">Domain Checker</span>
     <div>
-        <form onSubmit={handleDownload}>
-            <input
+        <div className="border-dashed border border-zinc-500 w-full h-full rounded-lg">
+        <form className='analyzer-form' onSubmit={handleDownload}>
+            <label htmlFor="inputlabel">Input API</label>
+            <input className='input-api'
                 type="text"
-                placeholder="Enter key"
+                placeholder="Enter VirusTotal API key"
                 value={key}
                 onChange={(e) => setKey(e.target.value)}
                 required
             />
-            <textarea
+            <label htmlFor="inputlabel">Input Domains</label>
+            <textarea className='input-ioc'
                 placeholder="Enter domains, one per line"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 required
             ></textarea>
-            <button type="submit">Download CSV</button>
+            <div className='button-loader'>
+            <button className='button-analyzer' type="submit">Analyze</button>
+            {loading && <p>Please wait! Report will be downloaded once analyzed.....</p>} {/* Conditional loader */}</div>
         </form>
+        </div>
     </div>
+    </>
   )
 }
+
+
+// const GraphicDesignPage = () => {
+//     return (
+//       <>
+//         <span className="font-bold text-4xl">Graphic Design</span>
+  
+//         <div className="border-dashed border border-zinc-500 w-full h-12 rounded-lg"></div>
+//         <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>
+//       </>
+//     );
+//   };
 
 export default Page
